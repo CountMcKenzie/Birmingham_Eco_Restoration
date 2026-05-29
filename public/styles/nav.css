@@ -4,23 +4,24 @@
     flex-direction: row;
     align-items: center;
     height: 50px;
+    color: white;
 }
 
 .navButton {
     height: 100%;
     flex-grow: 1;
     text-align: center;
-    background-color: tomato;
+    background-color: rgb(58, 58, 58);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
+    border: 2px solid rgb(77, 77, 77);
     border-top: none;
     
 }
 
 .navButton:hover {
     cursor: pointer;
-    background-color: rgb(255, 71, 38);
+    background-color: rgb(0, 0, 0);
 }
 

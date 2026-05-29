@@ -1,0 +1,42 @@
+body {
+    background-image: url(../assets/rosewoodBlurredDarkened.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero {
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    background: rgba(0, 0, 0, 40%);
+    margin-top: 8%;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 4px solid white;
+
+}
+ 
+#hero > h1 {
+    margin-bottom: 3rem;
+    font-size: 4.5rem;
+}
+
+#hero > p {
+    font-size: 2.5rem;
+    color: rgb(225, 225, 225);
+}
+
+#hero > h1::before {
+    content: "";
+    width: 15ch;
+    height: 4px;
+    display: inline-block;
+    background: linear-gradient(to right, rgb(104, 255, 104), rgb(102, 245, 255));
+    position: absolute;
+    transform: translate(0%, 1.69ch);
+    border-radius: 2px;
+}

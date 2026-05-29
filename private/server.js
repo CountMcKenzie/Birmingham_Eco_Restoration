@@ -11,11 +11,11 @@ app.set('view engine', 'ejs');
 app.use(express.static('../public'));
 
 
-app.get('/', pageHandler('index'))
+app.get('/', pageHandler('index', 'json/home.json'))
 
-function pageHandler(viewPath, jsonData = 'json/defaultEmpty.json') {
+function pageHandler(viewPath, jsonDataPath = 'json/defaultEmpty.json') {
     return withErrorHandling((req, res) => {
-        res.render(viewPath, loadJson('defaultEmpty.json'))
+        res.render(viewPath, loadJson(jsonDataPath))
     })
 }
 
@@ -30,9 +30,9 @@ function withErrorHandling(handler) {
     }
 }
 
-function loadJson(path) {
+function loadJson(jsonPath) {
     try {
-        const filePath = path.join(__dirname, path);
+        const filePath = path.join(__dirname, jsonPath);
         const jsonString = fs.readFileSync(filePath, 'utf8');
         return JSON.parse(jsonString);
     } catch (error) {
