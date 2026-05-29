@@ -1,0 +1,17 @@
+#footerWrapper{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    background-color: rgb(58, 58, 58);
+    margin-top: 30px;
+    border-top: 3px solid white;
+    gap: 30px;
+}
+
+#footerWrapper > img {
+    height: 40%;
+    width: auto;
+}   

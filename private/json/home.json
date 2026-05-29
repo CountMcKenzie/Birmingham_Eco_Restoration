@@ -1,6 +1,14 @@
 {
     "hero" : {
-        "title" : "Fixing Rosewood - for the people by the people",
-        "paragraph1" : "if you're not happy with a toxic water system, a day coated in smog or poisoned dirt, you're not alone"
-}
+        "title" : "Fixing Ladywood - for the people by the people",
+        "paragraph1" : "if you're not happy with a toxic water system, a day coated in smog or poisoned dirt, you're not alone (guys stick mission statement here instead)"
+    },
+    "goals" : {
+        "title" : "Why do we exist?",
+        "goal1" : "Goal example",
+        "goal2" : "Goal example",
+        "goal3" : "Goal example",
+        "goal4" : "to fix our streets looking like that ->",
+        "goal5" : "And much more, view our goals page!"
+    }
 }

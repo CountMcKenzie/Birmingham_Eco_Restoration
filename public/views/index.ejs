@@ -14,5 +14,24 @@
         <p><%= hero.paragraph1 %></p>
     </section>
 
+    <section id="information">
+        <div id="textWrapper">
+            <h1><%= goals.title %></h1>
+            <ul id="goalList">
+                <li class="goalListItem"><%= goals.goal1 %></li>
+                <li class="goalListItem"><%= goals.goal2 %></li>
+                <li class="goalListItem"><%= goals.goal3 %></li>
+                <li class="goalListItem"><%= goals.goal4 %></li>
+                <li class="goalListItem"><%= goals.goal5 %></li>
+            </ul>
+        </div>
+        <div id="imageWrapper">
+            <img src="../assets/derelictHome.jpg" alt="Derelict Ladywood Home">
+            <img src="../assets/overgrownDecay.jpeg" alt="Overgrown Ladywood Home">
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
 </body>
 </html>
