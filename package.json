@@ -1,0 +1,28 @@
+{
+  "name": "birmingham_eco_restoration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CountMcKenzie/Birmingham_Eco_Restoration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CountMcKenzie/Birmingham_Eco_Restoration/issues"
+  },
+  "homepage": "https://github.com/CountMcKenzie/Birmingham_Eco_Restoration#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
