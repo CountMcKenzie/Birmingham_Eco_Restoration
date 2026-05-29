@@ -12,6 +12,10 @@
 }
 
 #footerWrapper > img {
-    height: 40%;
+    height: 10vh;
     width: auto;
+}   
+
+#footerWrapper > img:nth-child(2) {
+    height: 18vh;
 }   
