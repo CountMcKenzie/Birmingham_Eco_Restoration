@@ -11,7 +11,8 @@ app.set('view engine', 'ejs');
 app.use(express.static('../public'));
 
 
-app.get('/', pageHandler('index', 'json/home.json'))
+app.get('/', pageHandler('index', 'json/home.json'));
+app.get('/quiz', pageHandler('quiz', 'json/quiz.json'));
 
 function pageHandler(viewPath, jsonDataPath = 'json/defaultEmpty.json') {
     return withErrorHandling((req, res) => {

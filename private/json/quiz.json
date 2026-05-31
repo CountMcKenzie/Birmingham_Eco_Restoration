@@ -1,0 +1,14 @@
+{
+    "questions" : {
+        "q1" : "How many homes in Ladywood have a poor Energy Performance Certificate (EPC) rating of D or below?"
+    },
+    "answers" : {
+        "q1" : {
+            "a1" : "6%",
+            "a2" : "12%",
+            "a3" : "28%",
+            "a4" : "34%",
+            "correct" : "a4"
+        }
+    }
+}
