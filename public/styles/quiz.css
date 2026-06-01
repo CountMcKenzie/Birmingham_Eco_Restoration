@@ -1,6 +1,6 @@
 body {
     background-image: 
-        
+        linear-gradient(to right, rgb(0, 0, 0) 0% 10%, rgba(0,0,0,0%), rgb(0, 0, 0) 90% 100%),
         url(../assets/ladywood4k.jpg);
     
     background-repeat: no-repeat; 
