@@ -1,9 +1,33 @@
 {
     "questions" : {
-        "q1" : "How many homes in Ladywood have a poor Energy Performance Certificate (EPC) rating of D or below?"
+        "q1" : "How many homes in Ladywood have a poor Energy Performance Certificate (EPC) rating of D or below?",
+        "q2" : "What was Birmingham City Football Clubs original name when it was founded?",
+        "q3" : "How many homes in Ladywood have a poor Energy Performance Certificate (EPC) rating of D or below?",
+        "q4" : "How many homes in Ladywood have a poor Energy Performance Certificate (EPC) rating of D or below?"
     },
     "answers" : {
         "q1" : {
+            "a1" : "6%",
+            "a2" : "12%",
+            "a3" : "28%",
+            "a4" : "34%",
+            "correct" : "a4"
+        },
+        "q2" : {
+            "a1" : "Birmingham City Football Club",
+            "a2" : "Small Heath Alliance",
+            "a3" : "Blue Irons Football Club",
+            "a4" : "The Canaries",
+            "correct" : "a2"
+        },
+        "q3" : {
+            "a1" : "6%",
+            "a2" : "12%",
+            "a3" : "28%",
+            "a4" : "34%",
+            "correct" : "a4"
+        },
+        "q4" : {
             "a1" : "6%",
             "a2" : "12%",
             "a3" : "28%",

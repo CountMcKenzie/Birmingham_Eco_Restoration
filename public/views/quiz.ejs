@@ -7,7 +7,36 @@
     <link rel="stylesheet" href="../styles/quiz.css">
 </head>
 <body>
+    <%- include('partials/navbar') %>
     <section id="quizHero">
+    <h1 id="mainTitle">Local Quiz</h1>
+    <form>
+        
+        <% for (let qKey in questions) { %>
+            <div class="questionContainer">
+
+                <h1><%= questions[qKey] %></h1>
+    
+                <div class="optionsContainer">
+
+                    <% for (let aKey in answers[qKey]) { %>
+
+                        <% if (aKey !== 'correct') { %>
+                            <div id="radioWrapper">
+                                <label class="optionLabel">
+                                    <input type="radio" name="<%= qKey %>" value="<%= aKey %>" required>
+                                    <%= answers[qKey][aKey] %>
+                                </label>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+
+        <button type="submit" class="submit-btn">Submit Answers</button>
+    </form>
     </section>
+    <%- include('partials/footer')%>
 </body>
 </html>
