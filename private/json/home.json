@@ -1,13 +1,13 @@
 {
     "hero" : {
         "title" : "Fixing Ladywood - for the people by the people",
-        "paragraph1" : "if you're not happy with a toxic water system, a day coated in smog or poisoned dirt, you're not alone (guys stick mission statement here instead)"
+        "paragraph1" : "Our mission is to provide food security to the residents of Ladywood Birmingham. We wish to provide the community this by making a website application where Ladywood residents can sign up to their closest foodbank and be notified to receive or donate food."
     },
     "goals" : {
         "title" : "Why do we exist?",
-        "goal1" : "Goal example",
-        "goal2" : "Goal example",
-        "goal3" : "Goal example",
+        "goal1" : "To provide food to the community",
+        "goal2" : "To bring honor to Ladywood",
+        "goal3" : "To help those who need it",
         "goal4" : "to fix our streets looking like that ->",
         "goal5" : "And much more, view our goals page and start learning!"
     }

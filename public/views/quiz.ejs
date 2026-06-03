@@ -5,26 +5,26 @@
     <title>Rosewood restore: Quiz</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/quiz.css">
+    <script src="../scripts/quiz.js" defer></script>
 </head>
 <body>
     <%- include('partials/navbar') %>
-    <section id="quizHero">
+<section id="quizHero">
     <h1 id="mainTitle">Local Quiz</h1>
-    <form>
+    
+    <form id="quizForm">
         
         <% for (let qKey in questions) { %>
-            <div class="questionContainer">
+            <div class="questionContainer" data-question-id="<%= qKey %>" data-correct="<%= answers[qKey]['correct'] %>">
 
                 <h1><%= questions[qKey] %></h1>
     
                 <div class="optionsContainer">
-
                     <% for (let aKey in answers[qKey]) { %>
-
                         <% if (aKey !== 'correct') { %>
-                            <div id="radioWrapper">
+                            <div class="radioWrapper">
                                 <label class="optionLabel">
-                                    <input type="radio" name="<%= qKey %>" value="<%= aKey %>" required>
+                                    <input type="radio" name="<%= qKey %>" value="<%= aKey %>" class="radioOption" required>
                                     <%= answers[qKey][aKey] %>
                                 </label>
                             </div>
@@ -36,7 +36,8 @@
 
         <button type="submit" class="submit-btn">Submit Answers</button>
     </form>
-    </section>
+</section>
+
     <%- include('partials/footer')%>
 </body>
 </html>
