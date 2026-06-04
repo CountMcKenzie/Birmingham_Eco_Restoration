@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 
@@ -13,6 +14,23 @@ app.use(express.static('../public'));
 
 app.get('/', pageHandler('index', 'json/home.json'));
 app.get('/quiz', pageHandler('quiz', 'json/quiz.json'));
+app.get('/foodbank', pageHandler('foodbank', 'json/foodbank.json')); 
+
+
+app.get('/api/foodbanks', async (req, res) => {
+    const { lat, lon } = req.query;
+    const apiKey = process.env.GEOAPIFY_API_KEY;
+    const url = `https://api.geoapify.com/v2/places?categories=service.social_facility.food&filter=circle:${lon},${lat},5000&bias=proximity:${lon},${lat}&limit=5&apiKey=${apiKey}`;
+    
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const textList = data.features.map(f => `${f.properties.name || 'Food Bank'} — ${f.properties.address_line2}`);
+        res.json(textList);
+    } catch (error) {
+        res.status(500).json(["Could not retrieve data."]);
+    }
+});
 
 function pageHandler(viewPath, jsonDataPath = 'json/defaultEmpty.json') {
     return withErrorHandling((req, res) => {

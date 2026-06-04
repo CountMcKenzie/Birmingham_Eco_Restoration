@@ -1,0 +1,11 @@
+#outputDiv {
+    background-color: rgba(0, 0, 0, 60%);
+    border: 3px solid white;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(50%, 50%);
+    height: 60%;
+    width: 60%;
+}

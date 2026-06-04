@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food bank finder</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/foodbank.css">
+    <script src="../scripts/foodbank.js" defer></script>
+</head>
+
+<body>
+    
+    <%- include('partials/navbar') %>
+
+    <div class="foodbankWrapper">
+
+        <h1>Find Food Banks Near You</h1>
+        <p>Click the button below to share your location and view the 5 closest facilities.</p>
+        
+        <button id="findBanksBtn">Find Nearest Food Banks</button>
+        
+        <div id="foodBankOutput"></div>
+    </div>
+
+    <%- include('partials/footer') %>   
+
+</body>
