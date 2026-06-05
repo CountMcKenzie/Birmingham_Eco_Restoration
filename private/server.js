@@ -20,7 +20,7 @@ app.get('/foodbank', pageHandler('foodbank', 'json/foodbank.json'));
 app.get('/api/foodbanks', async (req, res) => {
     const { lat, lon } = req.query;
     const apiKey = process.env.GEOAPIFY_API_KEY;
-    const url = `https://api.geoapify.com/v2/places?categories=service.social_facility.food&filter=circle:${lon},${lat},5000&bias=proximity:${lon},${lat}&limit=5&apiKey=${apiKey}`;
+    const url = `https://api.geoapify.com/v2/places?categories=service.social_facility.food&filter=circle:${-1.8899},${52.4815},5000&bias=proximity:${-1.8899},${52.4815}&limit=20&apiKey=${apiKey}`;
     
     try {
         const response = await fetch(url);

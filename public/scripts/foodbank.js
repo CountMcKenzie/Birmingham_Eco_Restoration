@@ -17,6 +17,7 @@ document.getElementById('findBanksBtn').addEventListener('click', () => {
 
                 if (foodBanks.length === 0 || foodBanks[0].includes("Could not")) {
                     outputDiv.innerHTML = "No food banks found nearby or an error occurred.";
+
                 } else {
 
                     outputDiv.innerHTML = foodBanks.join('<br><br>');
