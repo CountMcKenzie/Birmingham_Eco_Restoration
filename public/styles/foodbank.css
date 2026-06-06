@@ -1,11 +1,156 @@
-#outputDiv {
-    background-color: rgba(0, 0, 0, 60%);
-    border: 3px solid white;
-    border-radius: 8px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(50%, 50%);
-    height: 60%;
-    width: 60%;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 20px;
+}
+
+#heroSection {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+#heroSection h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+#heroSection p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+#choiceButtons {
+    display: flex;
+    gap: 10px;
+}
+
+#choiceButtons button {
+    background-color: #ffffff;
+    color: #2c2c2c;
+    border: 2px solid #ffffff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#choiceButtons button:hover {
+    background-color: #dddddd;
+}
+
+#formSection {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 30px;
+    margin-bottom: 20px;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#formSection h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+#formSection label {
+    font-size: 0.9rem;
+    color: #444444;
+    margin-top: 8px;
+}
+
+#formSection input,
+#formSection select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #aaaaaa;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+#formSection button {
+    margin-top: 16px;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#formSection button:hover {
+    background-color: #444444;
+}
+
+#resultsSection {
+    margin-top: 20px;
+}
+
+#resultsSection h2 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+#resultsSection p {
+    color: #555555;
+    margin-bottom: 16px;
+}
+
+#cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.place-card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 16px;
+    width: 280px;
+}
+
+.place-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #2c2c2c;
+}
+
+.place-card p {
+    font-size: 0.85rem;
+    color: #444444;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.place-card .label {
+    font-size: 0.75rem;
+    color: #888888;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.place-card a {
+    display: block;
+    margin-top: 10px;
+    background-color: #2c2c2c;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.85rem;
+}
+
+.place-card a:hover {
+    background-color: #444444;
+}
+
+.no-results {
+    color: #555555;
+    font-size: 1rem;
 }

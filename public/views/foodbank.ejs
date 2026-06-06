@@ -2,26 +2,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food bank finder</title>
+    <title>Food Support Hub</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/foodbank.css">
     <script src="../scripts/foodbank.js" defer></script>
 </head>
-
 <body>
-    
+
     <%- include('partials/navbar') %>
 
-    <div class="foodbankWrapper">
-
-        <h1>Find Food Banks Near You</h1>
-        <p>Click the button below to share your location and view the 5 closest facilities.</p>
-        
-        <button id="findBanksBtn">Find Nearest Food Banks</button>
-        
-        <div id="foodBankOutput"></div>
+    <div id="heroSection">
+        <h1>Food Support Hub</h1>
+        <p>Are you looking to donate, or do you need food support?</p>
+        <div id="choiceButtons">
+            <button onclick="showForm('donor')">I Want to Donate</button>
+            <button onclick="showForm('user')">I Need Food Support</button>
+        </div>
     </div>
 
-    <%- include('partials/footer') %>   
+    <div id="formSection" style="display: none;">
+
+        <h2 id="formTitle"></h2>
+
+        <input type="hidden" id="roleInput">
+
+        <label>Full Name</label>
+        <input type="text" id="nameInput" placeholder="Your full name">
+
+        <label>Email Address</label>
+        <input type="email" id="emailInput" placeholder="your@email.com">
+
+        <label>Phone Number</label>
+        <input type="text" id="phoneInput" placeholder="07xxx xxxxxx">
+
+        <label>Your Address</label>
+        <input type="text" id="addressInput" placeholder="e.g. 10 High Street, Birmingham, B1 1AA">
+
+        <div id="extraFields" style="display: none;">
+
+            <label>Do you have a place to stay?</label>
+            <select id="housingInput" onchange="toggleHomeAddress()">
+                <option value="yes">Yes, I have a home</option>
+                <option value="no">No, I am currently unhoused</option>
+            </select>
+
+            <div id="homeAddressBlock">
+                <label>Home Address (if different from above)</label>
+                <input type="text" id="homeAddressInput" placeholder="Your home address">
+            </div>
+
+            <label>How many people need food support?</label>
+            <input type="number" id="peopleCountInput" value="1" min="1">
+
+        </div>
+
+        <button onclick="submitForm()">Find Local Support</button>
+
+        <p id="formError" style="color: red; display: none;">Please fill in all fields before submitting.</p>
+
+    </div>
+
+    <div id="resultsSection" style="display: none;">
+        <h2 id="resultsTitle"></h2>
+        <p id="resultsNotice"></p>
+        <p id="loadingMsg" style="display: none;">Finding places near you...</p>
+        <div id="cardsContainer"></div>
+    </div>
+
+    <%- include('partials/footer') %>
 
 </body>
+</html>
