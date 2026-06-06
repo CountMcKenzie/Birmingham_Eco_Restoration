@@ -1,0 +1,36 @@
+{
+  "heading": "About Ladywood Community",
+  "intro": "The Ladywood Community project was created to tackle food insecurity in Birmingham by connecting residents with local food banks, support services and donation opportunities",
+  "cards": [
+    {
+      "name": "Cormac O Brien",
+      "text": "Team member",
+      "image": "/assets/Profile.png",
+      "alt": "Profile Icon"
+    },
+    {
+      "name": "Max Krumov",
+       "text": "Team member",
+      "image": "/assets/Profile.png",
+      "alt": "Profile Icon"
+    },
+    {
+      "name": "Oscar Mckenzie",
+      "text": "Team member",
+      "image": "/assets/Profile.png",
+      "alt": "Profile Icon"
+    },
+    {
+      "name": "Sarah Oke",
+      "text": "Team member",
+      "image": "/assets/Profile.png",
+      "alt": "Profile Icon"
+    },
+    {
+      "name": "Alex Okorafor",
+      "text": "Team member",
+      "image": "/assets/Profile.png",
+      "alt": "Profile Icon"
+    }
+  ]
+}
