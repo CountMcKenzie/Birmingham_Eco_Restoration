@@ -1,0 +1,69 @@
+#aboutPage {
+    min-height: calc(100vh - 50px);
+    padding: 80px 70px 40px;
+    text-align: center;
+}
+
+#aboutIntro {
+    color: white;
+    margin-bottom: 45px;
+}
+
+#aboutIntro h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#aboutIntro p {
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+#aboutCards {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.aboutCard {
+    background-color: white;
+    color: black;
+    width: 200px;
+    min-height: 260px;
+    padding: 25px 20px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    height: 260px;
+    overflow: hidden;
+}
+
+.aboutCard:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+        height: 340px;
+}
+
+.aboutCard img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.aboutCard h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.aboutCard p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
