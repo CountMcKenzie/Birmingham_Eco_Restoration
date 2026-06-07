@@ -60,7 +60,9 @@ app.get('/quiz', pageHandler('quiz', 'json/quiz.json'));
 app.get('/foodbank', pageHandler('foodbank', 'json/foodbank.json'));
 app.get('/aboutus', pageHandler('aboutus', 'json/aboutus.json'));
 
-
+app.get('/api/aboutus', (req, res) => {
+    res.json(loadJson('json/aboutus.json'));
+});
 
 app.get('/api/foodbanks', async (req, res) => {
     const { lat, lon } = req.query;
