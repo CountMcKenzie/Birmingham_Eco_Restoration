@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birmingham restoration project - Our Goals</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/ourgoals.css">
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+    <body>
+        <%- include('partials/navbar') %>
+
+
+        <main id="goalsPage">
+            <section id="goalsIntro">
+                <p id="goalsSubtitle"></p>
+                <h1 id="goalsHeading"></h1>
+                <a id="quizButton" href="/quiz">Take Quiz</a>
+            </section>
+
+            <section id="goalsList"></section>
+        </main>
+
+        <script src="/scripts/ourgoals.js" defer></script>
+    <%- include('partials/footer') %>
+    </body>
+</html>
