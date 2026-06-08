@@ -9,8 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 target = "quiz";
                 break;
             case 'foodbanks':
-                target = 'foodbank';
+                target = "foodbank";
                 break;
+            case 'aboutus':
+                target = "aboutus";
+                break;
+            case 'ourgoals':
+                target = "ourgoals";
+                break;
+
             default:
                 console.error(`Unknown nav ID: "${target}". Check your HTML IDs!`);
                 return; // Stop execution if ID doesn't match
