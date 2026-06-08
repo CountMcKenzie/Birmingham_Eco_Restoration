@@ -25,3 +25,22 @@
     background-color: rgb(0, 0, 0);
 }
 
+#navLogo {
+    height: 100%;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(58, 58, 58);
+    border-bottom: 2px solid white;
+    text-decoration: none;
+}
+
+#navLogo img {
+    height: 90px;
+    width: auto;
+}
+
+#navLogo:hover {
+    background-color: rgb(0, 0, 0);
+}
