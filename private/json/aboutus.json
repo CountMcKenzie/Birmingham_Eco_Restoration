@@ -1,38 +1,47 @@
 {
   "heading": "About Ladywood Community",
-  "intro": "Everyone at the The Ladywood Community project strive to tackle food insecurity in Birmingham by connecting residents with local food banks, support services and donation opportunities. All of us collaborated to improve Ladywood birminghm residents food stability",
+  "intro": "Everyone at the Ladywood Community project strives to tackle food insecurity in Birmingham by connecting residents with local food banks, support services and donation opportunities. We collaborated to improve food stability for Ladywood residents.",
   "cards": [
     {
       "name": "Cormac O Brien",
       "text": "Team member",
-      "subtext" : "> established planning, research and powerpoint planning, created use case diagram, fleshed out Personas and the MoSCow",
+      "subtext": ">Established planning, research and PowerPoint planning. Created the use case diagram, personas and MoSCoW analysis.",
       "image": "/assets/Profile.jpg",
       "alt": "Profile Icon"
     },
     {
       "name": "Max Krumov",
       "text": "Team member",
+      "subtext": ">Website prototype designs, analysis and team coordination using trello, as well as documentation and adding to the presentation.",
       "image": "/assets/Profile.jpg",
       "alt": "Profile Icon"
     },
     {
       "name": "Oscar Mckenzie",
       "text": "Team member",
+      "subtext": ">Created the website structure, home page and quiz page. Assisted with the food bank page and implemented the Geoapify API.",
       "image": "/assets/Profile.jpg",
-      "subtext":"> Created structure of website / set it up.\n Created home page, quiz page (script, ejs, style).\n assisted in functionality of foodbank page & implemented geoapify API",
       "alt": "Profile Icon"
     },
     {
       "name": "Sarah Oke",
       "text": "Team member",
+      "subtext": ">Created the contact page, researched local food banks and linked the webpage to Google. Wrote the stakeholder section for the PowerPoint.",
       "image": "/assets/Profile.jpg",
       "alt": "Profile Icon"
     },
     {
       "name": "Alex Okorafor",
       "text": "Team member",
+      "subtext": ">Created the About Us page, including the script, EJS and CSS. Assisted with the page design and wrote the Agile methodology section.",
       "image": "/assets/Profile.jpg",
       "alt": "Profile Icon"
     }
+  ],
+  "goals": [
+    "Improve food access",
+    "Support better nutrition",
+    "Connect the community",
+    "Make support easier to find"
   ]
 }
