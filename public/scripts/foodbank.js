@@ -1,3 +1,5 @@
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
 function showForm(role) {
     document.getElementById("roleInput").value = role;
 
@@ -33,12 +35,39 @@ function submitForm() {
         document.getElementById("formError").style.display = "block";
         return;
     }
+
     const formData = { role, name, email, phone, address };
+    
     if (role === "user") {
         formData.housing     = document.getElementById("housingInput").value;
         formData.homeAddress = document.getElementById("homeAddressInput").value.trim();
         formData.peopleCount = document.getElementById("peopleCountInput").value;
     }
+
+    supabaseClient
+        .from("submissions")
+        .insert([{
+            role: formData.role,
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            address: formData.address,
+            housing: formData.housing || null,
+            home_address: formData.homeAddress || null,
+            people_count: formData.peopleCount ? parseInt(formData.peopleCount, 10) : null,
+            submitted_at: new Date().toISOString() 
+        }])
+        .then(response => {
+            if (response.error) {
+                console.log(response.error.message);
+            } else {
+                console.log("Data inserted successfully");
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
     document.getElementById("resultsSection").style.display = "block";
     document.getElementById("loadingMsg").style.display = "block";
     document.getElementById("cardsContainer").innerHTML = "";
