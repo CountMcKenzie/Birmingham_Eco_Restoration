@@ -24,83 +24,65 @@ function toggleHomeAddress() {
 
 function submitForm() {
     document.getElementById("formError").style.display = "none";
-
     const role    = document.getElementById("roleInput").value;
     const name    = document.getElementById("nameInput").value.trim();
     const email   = document.getElementById("emailInput").value.trim();
     const phone   = document.getElementById("phoneInput").value.trim();
     const address = document.getElementById("addressInput").value.trim();
-
     if (name === "" || email === "" || phone === "" || address === "") {
         document.getElementById("formError").style.display = "block";
         return;
     }
-
     const formData = { role, name, email, phone, address };
-
     if (role === "user") {
         formData.housing     = document.getElementById("housingInput").value;
         formData.homeAddress = document.getElementById("homeAddressInput").value.trim();
         formData.peopleCount = document.getElementById("peopleCountInput").value;
     }
-
     document.getElementById("resultsSection").style.display = "block";
     document.getElementById("loadingMsg").style.display = "block";
     document.getElementById("cardsContainer").innerHTML = "";
     document.getElementById("resultsSection").scrollIntoView({ behavior: "smooth" });
 
-    fetch("/api/foodsupport", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("loadingMsg").style.display = "none";
-
-        if (role === "donor") {
-            document.getElementById("resultsTitle").innerText = "Places Near You That Need Donations";
-            document.getElementById("resultsNotice").innerText = "Thank you for donating. These places may get in touch when they need supplies.";
-        } else {
-            document.getElementById("resultsTitle").innerText = "Food Support Near You";
-            document.getElementById("resultsNotice").innerText = "Here are some nearby places that can help you out.";
-        }
-
-        const container = document.getElementById("cardsContainer");
-
-        if (data.places.length === 0) {
-            container.innerHTML = "<p class='no-results'>No places found near your address.</p>";
-            return;
-        }
-
-        for (let i = 0; i < data.places.length; i++) {
-            const place = data.places[i];
-            const mapsUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(place.name + " " + place.address);
-
-            let card = "<div class='place-card'>";
-            card += "<h3>" + place.name + "</h3>";
-            card += "<p class='label'>Address</p>";
-            card += "<p>" + place.address + "</p>";
-
-            if (place.openingTimes) {
-                card += "<p class='label'>Opening Times</p>";
-                card += "<p>" + place.openingTimes + "</p>";
+    fetch("/api/foodbanks")                                         
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("loadingMsg").style.display = "none";
+            if (role === "donor") {
+                document.getElementById("resultsTitle").innerText = "Places Near You That Need Donations";
+                document.getElementById("resultsNotice").innerText = "Thank you for donating. These places may get in touch when they need supplies.";
+            } else {
+                document.getElementById("resultsTitle").innerText = "Food Support Near You";
+                document.getElementById("resultsNotice").innerText = "Here are some nearby places that can help you out.";
             }
-
-            if (place.category) {
-                card += "<p class='label'>Type</p>";
-                card += "<p>" + place.category + "</p>";
+            const container = document.getElementById("cardsContainer");
+            if (data.length === 0) {                                 
+                container.innerHTML = "<p class='no-results'>No places found near your address.</p>";
+                return;
             }
-
-            card += "<a href='" + mapsUrl + "' target='_blank'>View on Google Maps</a>";
-            card += "</div>";
-
-            container.innerHTML += card;
-        }
-    })
-    .catch(error => {
-        document.getElementById("loadingMsg").style.display = "none";
-        document.getElementById("cardsContainer").innerHTML = "<p class='no-results'>Something went wrong. Please try again.</p>";
-        console.log(error);
-    });
+            for (let i = 0; i < data.length; i++) {                 
+                const place = data[i];                               
+                const mapsUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(place.name + " " + place.address);
+                let card = "<div class='place-card'>";
+                card += "<h3>" + place.name + "</h3>";
+                card += "<p class='label'>Address</p>";
+                card += "<p>" + place.address + "</p>";
+                if (place.openingTimes) {
+                    card += "<p class='label'>Opening Times</p>";
+                    card += "<p>" + place.openingTimes + "</p>";
+                }
+                if (place.category) {
+                    card += "<p class='label'>Type</p>";
+                    card += "<p>" + place.category + "</p>";
+                }
+                card += "<a href='" + mapsUrl + "' target='_blank'>View on Google Maps</a>";
+                card += "</div>";
+                container.innerHTML += card;
+            }
+        })
+        .catch(error => {
+            document.getElementById("loadingMsg").style.display = "none";
+            document.getElementById("cardsContainer").innerHTML = "<p class='no-results'>Something went wrong. Please try again.</p>";
+            console.log(error);
+        });
 }
