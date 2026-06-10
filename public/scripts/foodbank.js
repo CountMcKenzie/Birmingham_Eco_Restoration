@@ -1,3 +1,5 @@
+const supabaseUrl = "https://spwpysrzherxapyhyepv.supabase.co";
+const supabaseKey = "sb_publishable_puboS_g3nDMot5IzyejZRQ_6tPhMNGO";
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
 function showForm(role) {
@@ -35,7 +37,6 @@ function submitForm() {
         document.getElementById("formError").style.display = "block";
         return;
     }
-
     const formData = { role, name, email, phone, address };
     
     if (role === "user") {
@@ -55,7 +56,7 @@ function submitForm() {
             housing: formData.housing || null,
             home_address: formData.homeAddress || null,
             people_count: formData.peopleCount ? parseInt(formData.peopleCount, 10) : null,
-            submitted_at: new Date().toISOString() 
+            submitted_at: new Date().toISOString()
         }])
         .then(response => {
             if (response.error) {

@@ -1,11 +1,8 @@
-body {
-    background: linear-gradient(135deg, #101820, #23443c);
-}
-
 #aboutPage {
     min-height: calc(100vh - 50px);
-    padding: 80px 70px 40px;
+    padding: 80px 5% 40px; 
     text-align: center;
+    box-sizing: border-box;
 }
 
 #aboutIntro {
@@ -27,32 +24,30 @@ body {
 
 #aboutCards {
     display: grid;
-    border: 4px solid rgba(255,255,255,0.8);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+    border: 4px solid rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 40px;
-    justify-content: center;
-    gap: 28px;
     max-width: 1100px;
     margin: 50px auto 0;
-    grid-template-columns: repeat(6, 1fr);
+    
 }
 
 .aboutCard {
-    background-color: white;
-    color: black;
-    width: 240px;
-    min-height: 260px;
-    padding: 25px 20px;
-    border-radius: 10px;
-    text-align: center;
-    backdrop-filter: blur(20px);
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     color: white;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    grid-column: span 2;
+    width: 100%; 
+    box-sizing: border-box;
     height: 260px;
     overflow: hidden;
-    grid-column: span 2;
-    border: 2px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
 }
 
 .aboutCard:hover {
@@ -85,4 +80,42 @@ body {
 
 .aboutCard:nth-child(5) {
     grid-column: 4 / span 2;
+}
+
+/* Media Queries */
+
+/* Tablet Breakpoint */
+@media (max-width: 900px) {
+    #aboutCards {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+        padding: 30px;
+    }
+
+    .aboutCard {
+        grid-column: span 1; 
+    }
+
+    .aboutCard:nth-child(4),
+    .aboutCard:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 600px) {
+    #aboutPage {
+        padding: 40px 20px 40px;
+    }
+
+    #aboutCards {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+        border-width: 2px; 
+    }
+
+    .aboutCard {
+        height: auto; 
+        min-height: 260px;
+    }
+
 }

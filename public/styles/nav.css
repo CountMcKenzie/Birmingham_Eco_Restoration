@@ -34,8 +34,7 @@
     border: none;
 }
 
-.navButton:hover,
-#navLogo:hover {
+.navButton:hover, #navLogo:hover {
     cursor: pointer;
     background-color: rgb(0, 0, 0);
 }
