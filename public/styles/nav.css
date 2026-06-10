@@ -39,6 +39,9 @@
 #navLogo img {
     height: 90px;
     width: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    cursor: pointer;
 }
 
 #navLogo:hover {
