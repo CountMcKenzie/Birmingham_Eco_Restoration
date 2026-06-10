@@ -45,7 +45,7 @@
     grid-column: span 2;
     width: 100%; 
     box-sizing: border-box;
-    height: 260px;
+    height: 400px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
@@ -53,8 +53,7 @@
 .aboutCard:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     cursor: pointer;
-    height: 340px;
-    transform: translateY(-12px);
+    background-color: black;
 }
 
 .aboutCard img {
