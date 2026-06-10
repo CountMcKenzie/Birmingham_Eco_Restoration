@@ -82,6 +82,48 @@
     grid-column: 4 / span 2;
 }
 
+
+#goalsPanel {
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    padding: 40px;
+
+    border: 4px solid rgba(255,255,255,0.8);
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    text-align: left;
+}
+
+#goalsPanel h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #73fff7;
+}
+
+#goalsList {
+    list-style: none;
+    padding: 0;
+}
+
+#goalsList li {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    position: relative;
+}
+
+#goalsList li::before {
+    content: "✓";
+    color: #73fff7;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
 /* Media Queries */
 
 /* Tablet Breakpoint */
