@@ -5,6 +5,7 @@
     {
       "name": "Cormac O Brien",
       "text": "Team member",
+      "subtext" : "> established planning, research and powerpoint planning, created use case diagram, fleshed out Personas and the MoSCow",
       "image": "/assets/Profile.jpg",
       "alt": "Profile Icon"
     },
@@ -18,6 +19,7 @@
       "name": "Oscar Mckenzie",
       "text": "Team member",
       "image": "/assets/Profile.jpg",
+      "subtext":"> Created structure of website / set it up.\n Created home page, quiz page (script, ejs, style).\n assisted in functionality of foodbank page & implemented geoapify API",
       "alt": "Profile Icon"
     },
     {

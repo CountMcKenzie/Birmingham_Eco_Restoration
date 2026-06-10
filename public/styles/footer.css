@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     transform: translateY(100%);
     background-color: rgb(58, 58, 58);
     margin-top: 30px;
@@ -11,11 +12,11 @@
     gap: 30px;
 }
 
-#footerWrapper > img {
+.footerImage {
     height: 10vh;
     width: auto;
 }   
 
-#footerWrapper > img:nth-child(2) {
+.footerImage:nth-child(2) {
     height: 18vh;
 }   

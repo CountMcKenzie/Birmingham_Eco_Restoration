@@ -10,8 +10,9 @@ fetch("/api/aboutus")
             cardsContainer.innerHTML += `
                 <article class="aboutCard">
                     <img src="${card.image}" alt="${card.alt}">
-                    <h2>${card.name}</h2>
-                    <p>${card.text}</p>
+                    <h2 style="background-color: black; margin-top: 1ch; border-radius:100px;">${card.name}</h2>
+                    <p style="text-decoration: underline; margin-bottom:1ch; ">${card.text}</p>
+                    <p>${card.subtext}</p>
                 </article>
             `;
         });
